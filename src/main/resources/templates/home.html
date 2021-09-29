@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commonHead :: head"></head>
+<body>
+<div class="container">
+    <div>
+        <h1>AWS S3 Image Uploader</h1>
+    </div>
+    <div class="container">
+        <div style="max-width: 450px;">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-bold">이름</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label fw-bold">가격</label>
+                    <input type="text" class="form-control" id="price">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label fw-bold">이미지</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary" id="product-add-btn">상품 등록</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<th:block th:replace="fragments/commonScript :: script"></th:block>
+</body>
+</html>
